@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aierpify API Reference</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Set the favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      sizes="32x32"
+      href="./static/logo.png"
+    />
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <!-- Load the Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+
+    <!-- Initialize the Scalar API Reference -->
+    <script>
+      Scalar.createApiReference("#app", {
+        // The URL of the OpenAPI/Swagger document
+        url: "./openapi.json",
+        servers: [
+          {
+            url: "https://api.aierpify.com",
+            description: "Production",
+          },
+          {
+            url: "https://api-staging.aierpify.com",
+            description: "Staging",
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+# settings.toml
+
+# Development Environment
+[development]
+NAME = "development"
+DEBUG = true
+TITLE = "Aierpify API"
+DESCRIPTION = "Aierpify ERP System API"
+VERSION = "1.0.0"
+CONTACT_NAME = "Aierpify Dev Support"
+CONTACT_EMAIL = "support@aierpify.com"
+
+# API Documentation
+OPENAPI_URL = "/openapi.json"
+DOCS_URL = "/docs"
+REDOC_URL = "/redoc"
+
+# Server Config
+HOST = "0.0.0.0"
+PORT = 8000
+WORKERS = 2
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:4173",
+]
+
+# DB Config
+POSTGRES_HOST = "127.0.0.1"
+POSTGRES_PORT = "5432"
+POSTGRES_DB = "aeirpify_backend"
+
+# Auth Config
+BETTER_AUTH_URL = "http://localhost:8001"
+BETTER_AUTH_SESSION_COOKIE_ALIAS = "aierpify.session_token"
+
+# FBR Config
+FBR_API_INVOICE_VALIDATE_URL = "https://gw.fbr.gov.pk/di_data/v1/di/validateinvoicedata"
+FBR_API_INVOICE_VALIDATE_SANDBOX_URL = "https://gw.fbr.gov.pk/di_data/v1/di/validateinvoicedata_sb"
+FBR_API_INVOICE_SUBMIT_URL = "https://gw.fbr.gov.pk/di_data/v1/di/postinvoicedata"
+FBR_API_INVOICE_SUBMIT_SANDBOX_URL = "https://gw.fbr.gov.pk/di_data/v1/di/postinvoicedata_sb"
+FBR_API_HS_UOM_URL = "https://gw.fbr.gov.pk/pdi/v2/HS_UOM"

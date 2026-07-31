@@ -1,0 +1,114 @@
+[project]
+name = "aierpify-backend"
+version = "0.1.0"
+description = "Backend For Aierpify"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.16.5",
+    "asyncpg>=0.30.0",
+    "better-auth",
+    "dynaconf>=3.2.11",
+    "email-validator>=2.3.0",
+    "fastapi[standard]>=0.116.1",
+    "go-task-bin>=3.44.1",
+    "httpx>=0.28.1",
+    "mypy>=1.18.2",
+    "openpyxl>=3.1.5",
+    "orjson>=3.11.3",
+    "pyjwt[crypto]>=2.10.1",
+    "python-dateutil>=2.9.0.post0",
+    "ruff>=0.15.4",
+    "socketify>=0.0.31",
+    "sqlmodel>=0.0.24",
+    "ty>=0.0.1a20",
+    "tzdata>=2025.3",
+    "xlrd>=2.0.1",
+]
+
+[tool.uv]
+exclude-newer = "1 week"
+
+[tool.uv.sources]
+better-auth = { git = "https://github.com/DanyaalMajid/better-auth-sdks.git", subdirectory = "sdks/python", rev = "main" }
+
+[tool.ty.rules]
+# Rules that default to "error"
+byte-string-type-annotation = "error"
+call-non-callable = "error"
+conflicting-argument-forms = "error"
+conflicting-declarations = "error"
+conflicting-metaclass = "error"
+cyclic-class-definition = "error"
+duplicate-base = "error"
+duplicate-kw-only = "error"
+escape-character-in-forward-annotation = "error"
+fstring-type-annotation = "error"
+implicit-concatenated-string-type-annotation = "error"
+inconsistent-mro = "error"
+index-out-of-bounds = "error"
+instance-layout-conflict = "error"
+invalid-argument-type = "error"
+invalid-assignment = "error"
+invalid-attribute-access = "error"
+invalid-await = "error"
+invalid-base = "error"
+invalid-context-manager = "error"
+invalid-declaration = "error"
+invalid-exception-caught = "error"
+invalid-generic-class = "error"
+invalid-key = "error"
+invalid-legacy-type-variable = "error"
+invalid-metaclass = "error"
+invalid-named-tuple = "error"
+invalid-overload = "error"
+invalid-parameter-default = "error"
+invalid-paramspec = "error"
+invalid-protocol = "error"
+invalid-raise = "error"
+invalid-return-type = "error"
+invalid-super-argument = "error"
+invalid-syntax-in-forward-annotation = "error"
+invalid-type-alias-type = "error"
+invalid-type-checking-constant = "error"
+invalid-type-form = "error"
+invalid-type-guard-call = "error"
+invalid-type-guard-definition = "error"
+invalid-type-variable-constraints = "error"
+missing-argument = "error"
+missing-typed-dict-key = "error"
+no-matching-overload = "error"
+not-subscriptable = "error"
+not-iterable = "error"
+parameter-already-assigned = "error"
+positional-only-parameter-as-kwarg = "error"
+raw-string-type-annotation = "error"
+static-assert-error = "error"
+subclass-of-final-class = "error"
+too-many-positional-arguments = "error"
+type-assertion-failure = "error"
+unavailable-implicit-super-arguments = "error"
+unknown-argument = "error"
+unresolved-attribute = "error"
+unresolved-import = "error"
+unresolved-reference = "error"
+unsupported-bool-conversion = "error"
+unsupported-operator = "error"
+zero-stepsize-in-slice = "error"
+
+# Rules that default to "warn"
+ambiguous-protocol-member = "warn"
+deprecated = "warn"
+ignore-comment-unknown-rule = "warn"
+invalid-ignore-comment = "warn"
+possibly-missing-attribute = "warn"
+possibly-missing-implicit-call = "warn"
+possibly-missing-import = "warn"
+redundant-cast = "warn"
+undefined-reveal = "warn"
+unresolved-global = "warn"
+unsupported-base = "warn"
+useless-overload-body = "warn"
+division-by-zero = "warn"
+possibly-unresolved-reference = "warn"
+unused-type-ignore-comment = "ignore"

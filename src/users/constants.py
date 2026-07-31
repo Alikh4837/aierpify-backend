@@ -1,0 +1,3 @@
+from uuid import UUID
+
+DEFAULT_SUBSCRIPTION_PLAN_ID: UUID = UUID("8fbf30f5-8cee-4605-9e4b-e0fff8b1b938")

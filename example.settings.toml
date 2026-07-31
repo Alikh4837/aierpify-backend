@@ -1,0 +1,18 @@
+[development]
+# Development Settings
+POSTGRES_HOST = ""
+POSTGRES_PORT = ""
+POSTGRES_DB = ""
+
+[production]
+# Production Settings
+POSTGRES_HOST = ""
+POSTGRES_PORT = ""
+POSTGRES_DB = ""
+
+
+[staging]
+# Staging Settings
+POSTGRES_HOST = ""
+POSTGRES_PORT = ""
+POSTGRES_DB = ""

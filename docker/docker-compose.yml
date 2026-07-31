@@ -1,0 +1,12 @@
+services:
+  backend:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    environment:
+      - AIERPIFY_APP_ENV=production
+    ports:
+      - 8000
+    volumes:
+      - "../../files/secrets.toml:/app/secrets.toml"
+    restart: always
